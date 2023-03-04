@@ -1,0 +1,72 @@
+/*a {
+  background-color: #ffffff00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23220000' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23440000' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23660000' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23880000' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23A00' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+*/
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap');
+
+:root {
+    --bg: url('https://images.unsplash.com/photo-1670611554940-c813196be2fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80');
+}
+
+.container {
+    width: 600px;
+    aspect-ratio: 16/9;
+    padding-inline-end: 1rem;
+    background: linear-gradient(to bottom, rgb(50 50 50 / 0.3), rgb(25 50 50 / 0.9)),
+        var(--bg) no-repeat center;
+    background-size: cover;
+    border-radius: 0.75rem;
+    display: grid;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5rem;
+    place-self: end;
+
+    span {
+        --opacity: 20;
+        opacity: calc(var(--opacity) * 1%);
+    }
+}
+
+body {
+    height: 100%;
+    font-family: 'Eczar', arial;
+    padding-block-start: 2rem;
+    display: grid;
+    justify-content: center;
+    background: #111926;
+    color: white;
+}
+
+/** Resets */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+img {
+  max-width: 100%;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
